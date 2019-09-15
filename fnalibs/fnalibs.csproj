@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <NoBuild>true</NoBuild>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <RepositoryUrl>https://github.com/butter-cat-games/fnalibs</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/butter-cat-games/fnalibs</PackageProjectUrl>
+    <PackageLicenseExpression>MS-PL</PackageLicenseExpression>
+    <Version>2019.09.15</Version>
+    <Description>This package contains the pre-compiled binaries for https://github.com/FNA-XNA as at the date referenced in the package version.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="build\**" PackagePath="build" Visible="false" />
+    <Content Include="contentFiles\**" PackagePath="contentFiles" Visible="false" />
+    <Content Include="*.cs" PackagePath="src" Visible="false" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="FNALibs.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+  </ItemGroup>
+
+</Project>
