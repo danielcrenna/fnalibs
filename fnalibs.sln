@@ -3,21 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29230.47
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fnalibs", "fnalibs\fnalibs.csproj", "{84528387-F8C5-460D-AC54-08D9E54D9185}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{97E6C2C9-15EF-4FC6-BE41-814322BC5525}"
-	ProjectSection(SolutionItems) = preProject
-		build\CopyFNALibs.targets = build\CopyFNALibs.targets
-	EndProjectSection
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "fnalibs", "fnalibs\fnalibs.csproj", "{84528387-F8C5-460D-AC54-08D9E54D9185}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Package|Any CPU = Package|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{84528387-F8C5-460D-AC54-08D9E54D9185}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{84528387-F8C5-460D-AC54-08D9E54D9185}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84528387-F8C5-460D-AC54-08D9E54D9185}.Package|Any CPU.ActiveCfg = Release|Any CPU
+		{84528387-F8C5-460D-AC54-08D9E54D9185}.Package|Any CPU.Build.0 = Release|Any CPU
 		{84528387-F8C5-460D-AC54-08D9E54D9185}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84528387-F8C5-460D-AC54-08D9E54D9185}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection

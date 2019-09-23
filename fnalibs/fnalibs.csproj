@@ -6,21 +6,26 @@
     <NoBuild>true</NoBuild>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <RepositoryUrl>https://github.com/butter-cat-games/fnalibs</RepositoryUrl>
+    <RepositoryUrl>https://github.com/FNA-XNA/FNA</RepositoryUrl>
     <PackageProjectUrl>https://github.com/butter-cat-games/fnalibs</PackageProjectUrl>
     <PackageLicenseExpression>MS-PL</PackageLicenseExpression>
-    <Version>2019.09.15</Version>
+    <Version>2019.09.15.9</Version>
     <Description>This package contains the pre-compiled binaries for https://github.com/FNA-XNA as at the date referenced in the package version.</Description>
+    <MinClientVersion>2.5</MinClientVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>TRACE;FNA</DefineConstants>
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="build\**" PackagePath="build" Visible="false" />
-    <Content Include="contentFiles\**" PackagePath="contentFiles" Visible="false" />
+    <Content Include="build\**" PackagePath="build" Visible="true" />
+    <Content Include="lib\**" PackagePath="lib" Visible="false" />
     <Content Include="*.cs" PackagePath="src" Visible="false" />
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="FNALibs.cs">
+    <Compile Update="Main.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
   </ItemGroup>
