@@ -2,10 +2,12 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
   <ItemGroup>
-    <HelperCode Include="$(MSBuildThisFileDirectory)..\src\Main.cs" />
+    <HelperCode Include="$(MSBuildThisFileDirectory)..\src\_FNA.cs" />
   </ItemGroup>
 
-  <Target Name="BeforeBuild">
+  <Target Name="InstallHelperClass" BeforeTargets="Build">
+    <Message Importance="High" Text="OS=$(OS), Platform=$(Platform)" />
+    <Message Importance="High" Text="Installing @(HelperCode)..." />
     <Copy
       SourceFiles="@(HelperCode)"
       DestinationFiles="@(HelperCode->'$(ProjectDir)%(Filename)%(Extension)')"
@@ -13,6 +15,8 @@
   </Target>
 
 	<ItemGroup>
+
+    <!-- PC -->
     <Content Include="$(MSBuildThisFileDirectory)..\lib\x86\**\*.*" Condition="'$(OS)' == 'Windows_NT' AND '$(Platform)' != 'x64'">
       <Link>x86\%(RecursiveDir)%(Filename)%(Extension)</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -33,6 +37,27 @@
       <Link>lib64\%(RecursiveDir)%(Filename)%(Extension)</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+
+    <!-- iOS -->
+    <Content Include="$(MSBuildThisFileDirectory)..\lib\xamarin.ios\simulator\**\*" Condition="'$(Platform)' == 'iPhoneSimulator'">
+      <Link>%(Filename)%(Extension)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)..\lib\xamarin.ios\device\**\*" Condition="'$(Platform)' == 'iPhone'">
+      <Link>%(Filename)%(Extension)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+
+    <!-- tvOS -->
+    <Content Include="$(MSBuildThisFileDirectory)..\lib\xamarin.tvos\simulator\**\*" Condition="'$(Platform)' == 'iPhoneSimulator' AND '$(MtouchNoSymbolStrip)' == 'true' AND '$(PlatformTarget)' == 'x86' ">
+      <Link>%(Filename)%(Extension)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)..\lib\xamarin.tvos\device\**\*" Condition="'$(Platform)' == 'iPhone' AND '$(MtouchNoSymbolStrip)' == 'true' AND '$(PlatformTarget)' == 'x86'">
+      <Link>%(Filename)%(Extension)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+
   </ItemGroup>
 	
 </Project>

@@ -3,7 +3,7 @@ using System.IO;
 using System.Runtime.InteropServices;
 
 #if FNA
-public static class Main
+public static class Bootstrap
 {
     [DllImport("kernel32.dll", CharSet = CharSet.Unicode, SetLastError = true)]
     [return: MarshalAs(UnmanagedType.Bool)]
