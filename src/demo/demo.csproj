@@ -14,7 +14,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="fnalibs" Version="19.9.0-pre" />
+    <PackageReference Include="fnalibs" Version="19.11.0" />
   </ItemGroup>
 
 </Project>
