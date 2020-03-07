@@ -10,7 +10,7 @@
     <RepositoryUrl>https://github.com/FNA-XNA/FNA</RepositoryUrl>
     <PackageProjectUrl>https://github.com/butter-cat-games/fnalibs</PackageProjectUrl>
     <PackageLicenseExpression>MS-PL</PackageLicenseExpression>
-    <PackageVersion>20.02</PackageVersion>
+    <PackageVersion>20.03</PackageVersion>
     <Description>This package contains the pre-compiled binaries for https://github.com/FNA-XNA, tested on the FNA version specified as the package version.</Description>
     <MinClientVersion>2.5</MinClientVersion>
   </PropertyGroup>
