@@ -44,8 +44,8 @@ Global
 		{3D65BBEF-42D2-42E7-B229-36642175809F}.Debug|iPhone.Build.0 = Debug|Any CPU
 		{3D65BBEF-42D2-42E7-B229-36642175809F}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
 		{3D65BBEF-42D2-42E7-B229-36642175809F}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
-		{3D65BBEF-42D2-42E7-B229-36642175809F}.Package|Any CPU.ActiveCfg = Debug|Any CPU
-		{3D65BBEF-42D2-42E7-B229-36642175809F}.Package|Any CPU.Build.0 = Debug|Any CPU
+		{3D65BBEF-42D2-42E7-B229-36642175809F}.Package|Any CPU.ActiveCfg = Release|Any CPU
+		{3D65BBEF-42D2-42E7-B229-36642175809F}.Package|Any CPU.Build.0 = Release|Any CPU
 		{3D65BBEF-42D2-42E7-B229-36642175809F}.Package|iPhone.ActiveCfg = Debug|Any CPU
 		{3D65BBEF-42D2-42E7-B229-36642175809F}.Package|iPhone.Build.0 = Debug|Any CPU
 		{3D65BBEF-42D2-42E7-B229-36642175809F}.Package|iPhoneSimulator.ActiveCfg = Debug|Any CPU
