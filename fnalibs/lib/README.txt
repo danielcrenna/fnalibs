@@ -6,11 +6,12 @@ These are the folders included:
 - x64: 64-bit Windows
 - lib64: Linux (64-bit only)
 - osx: macOS (64-bit only)
+- vulkan: MoltenVK ICD for macOS
+	- Place this at Game.app/Contents/Resources/vulkan/
 
 The library dependency list is as follows:
 
 - SDL2, used as the platform layer
-- MojoShader, used in the Graphics namespace
+- FNA3D, used in the Graphics namespace
 - FAudio, used in the Audio/Media namespaces
-- SDL2_image, only used for Texture2D.FromStream and Texture2D.SaveAsPng/Jpeg
 - libtheorafile, only used for VideoPlayer

@@ -14,7 +14,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="fnalibs" Version="20.3.0" />
+    <ProjectReference Include="..\..\fnalibs\fnalibs.csproj" />
   </ItemGroup>
 
 </Project>
